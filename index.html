@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- <!DOCTYPE html>
+<html lang="en"> -->
+
 <head>
   <meta charset="UTF-8" />
   <title>Colin Shanafelt – Biography</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Biography of Colin Shanafelt, author, traveler, veteran, and Professor of English at The University of Texas at Austin."
-  />
-  <style>
-    :root {
+  <meta name="description" content="Biography of Colin Shanafelt, author, traveler, veteran, and Professor of English at The University of Texas at Austin." />
+    <style>
+        :root {
       --bg: #0f172a;
       --bg-alt: #020617;
       --card: #111827;
@@ -33,7 +31,7 @@
         sans-serif;
       background: radial-gradient(circle at top left, #1f2937 0, #020617 50%);
       color: var(--text);
-      line-height: 1.7;
+      line-height: 1.5;
     }
 
     a {
@@ -102,21 +100,23 @@
 
     h1 {
       font-size: clamp(2.1rem, 3vw, 2.7rem);
-      margin: 16px 0 10px;
+      margin: 5px 0 5px;
+      padding-bottom: 0;
       letter-spacing: 0.03em;
     }
 
     .hero-subtitle {
       font-size: 1rem;
       color: var(--muted);
-      margin-bottom: 16px;
+      margin-bottom: 15px;
+      margin-top: 0;
     }
 
     .hero-meta {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-bottom: 18px;
+      margin-bottom: 10px;
       font-size: 0.9rem;
       color: var(--muted);
     }
@@ -201,9 +201,10 @@
     }
 
     .card {
+/*       background-color: red; */
       background: radial-gradient(circle at top left, #111827 0, #020617 60%);
       border-radius: var(--radius-lg);
-      padding: 18px 18px 16px;
+      padding: 10px;
       border: 1px solid var(--border);
       box-shadow: var(--shadow-soft);
     }
@@ -220,44 +221,57 @@
     .works-grid {
       display: grid;
       grid-template-columns: minmax(0, 1fr);
-      gap: 18px;
+      gap: 14px;
     }
 
     .work-item-title {
       font-weight: 600;
-      margin-bottom: 6px;
+      margin-bottom: 0px;
     }
 
     .work-meta {
       font-size: 0.88rem;
       color: var(--muted);
-      margin-bottom: 8px;
+      margin-bottom: 5px;
     }
 
     .iframe-wrapper {
-      position: relative;
-      padding-top: max(60%, 324px);
       width: 100%;
-      height: 0;
       border-radius: 14px;
       overflow: hidden;
       border: 1px solid rgba(55, 65, 81, 0.8);
       background: #020617;
+      padding-top: 5px;
+       padding-bottom: 0px;
     }
 
     .iframe-wrapper iframe {
-      position: absolute;
-      border: none;
+      display: block;
       width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
+      height: 250px;
+      border: none;
+      padding: 0 !important;
+      margin: 0 !important;
     }
+    
+.image-frame {
+  display: flex;
+  align-items: center;   /* vertical centering */
+  justify-content: center; /* horizontal centering */
+  padding: 10px;       /* top & bottom padding */
+}
+
+.image-frame img {
+  display: block;
+  max-width: 100%;
+  max-height: 225px;     /* 300px total height minus 24px top & bottom padding */
+  height: auto;
+}
 
     .media-card {
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 12px;
     }
 
     .media-card p {
@@ -313,46 +327,39 @@
     }
   </style>
 </head>
+
 <body>
   <div class="page">
     <header>
       <div class="hero-photo">
-        <!-- Update src to your actual image path/filename -->
-<img src="assets/images/profile1.jpg" alt="Colin Shanafelt" class="profile-image">
+        <img src="https://squallfight.github.io/biography/assets/images/profile1.jpg" alt="Colin Shanafelt headshot" />
       </div>
       <div class="hero-text">
         <div class="hero-tag">
-          <span class="dot"></span>
+          <span class=""></span>
           <span>Author • Veteran • Professor</span>
         </div>
-        <h1>Colin Shanafelt</h1>
-        <p class="hero-subtitle">
-          Author, traveler, veteran, and Professor of English in the Department of
-          Rhetoric &amp; Writing at The University of Texas at Austin.
-        </p>
+<h1>Colin Shanafelt</h1>
+<p class="hero-subtitle"><span style="color: lightgray;"><em>Assistant Professor of Instruction</em></span> 
+<br>
+<span style="color: #bf5700;">The University of Texas at Austin</span>&nbsp;&nbsp;<span style="color: white;">|</span>&nbsp;&nbsp;<span>Department of Rhetoric &amp; Writing</span></p>
         <div class="hero-meta">
-          <span>Fiction &amp; Nonfiction Author</span>
-          <span>U.S. Air Force Veteran</span>
-          <span>Global Traveler</span>
+          <span>Professor</span>
+          <span>Author</span>
+          <span>Veteran</span>
+          <span>Traveler</span>
+          <span>LitNotes</span>
+         <span>Amazon</span>
+          <span>U.S. Air Force</span>
         </div>
-        <div class="hero-links">
-          <a
-            class="btn btn-primary"
-            href="https://www.youtube.com/@LitNotes"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Visit the LitNotes Channel
+<!--         <div class="hero-links">
+          <a class="btn btn-primary" href="https://www.youtube.com/@LitNotes" target="_blank" rel="noopener noreferrer">
+            LitNotes
           </a>
-          <a
-            class="btn btn-ghost"
-            href="https://www.amazon.com/What-Gods-Would-Be-Theirs-ebook/dp/B004OEIMFS"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Books on Amazon
+          <a class="btn btn-ghost" href="https://www.amazon.com/stores/Colin-Shanafelt/author/B004PHNLXW" target="_blank" rel="noopener noreferrer">
+            Amazon
           </a>
-        </div>
+        </div> -->
       </div>
     </header>
 
@@ -362,202 +369,44 @@
         <section>
           <h2>Biography</h2>
           <div class="card bio-text">
-            <p>
-              Colin Shanafelt is an author, traveler, veteran, and Professor of
-              English. His published works include
-              <em>What Gods Would Be Theirs?</em> (novel),
-              <em>One Thing Right</em> (children's book), and
-              <em>Literary Analysis &amp; Writing Guide</em> (textbook). His
-              unpublished second novel <em>Apotheosis</em> chronicles the run-up
-              to general artificial intelligence via quantum computing.
-            </p>
-            <p>
-              Professor Shanafelt is a U.S. Air Force veteran who deployed to
-              South America and the Middle East for forward air control ground
-              combat missions.
-            </p>
-            <p>
-              In 2012, after creating a successful suite of educational
-              applications for students of writing, rhetoric, and literature,
-              he traveled around the world with his wife and daughter,
-              eventually visiting twenty-five countries in fifteen months.
-            </p>
-            <p>
-              Professor Shanafelt currently teaches in the Department of
-              Rhetoric &amp; Writing at The University of Texas at Austin.
-            </p>
+            <p><strong>Colin Shanafelt</strong> is an author, educator, veteran, and digital-learning innovator whose work bridges literature, rhetoric, and emerging technologies. He serves as an Assistant Professor of Instruction in the Department of Rhetoric &amp; Writing at The University of Texas at Austin, where he teaches courses in rhetoric, critical reading, and persuasive writing. His committee work includes the Slatin Prize for Electronic Media in Education and the Artificial Intelligence &amp; Writing Subcommittee, reflecting his commitment to the future of writing in an AI-driven world.</p>
+<p>A published novelist, children&rsquo;s author, and textbook writer, Shanafelt is the author of <em>What Gods Would Be Theirs?</em>, <em>One Thing Right</em>, and the <em>Literary Analysis &amp; Writing Guide</em>. His forthcoming novel, <em>Apotheosis</em>, explores the ascent of general artificial intelligence through the lens of quantum computing. As a creator of multimodal learning resources&mdash;including instructional guides, rhetorical glossaries, video lectures, and educational apps&mdash;he has produced a substantial body of digital work used by students across institutions.</p>
+<p>In 2012, after developing a successful suite of educational applications, Shanafelt traveled around the world with his wife and daughter, visiting twenty-five countries over fifteen months&mdash;a journey that continues to shape his global perspective on teaching, writing, and culture.</p>
+<p>Shanafelt is a United States Air Force veteran who served in the 728th Air Control Squadron as a forward air control radio technician. His deployments to Kuwait and Colombia supported <em>Operation Southern Watch</em> and <em>Operation Laser Strike</em>, respectively, where he provided mobile ground-combat logistics and mission support.</p>
           </div>
         </section>
 
-        <section>
-          <h2>Published Works</h2>
-          <div class="works-grid">
-            <!-- What Gods Would Be Theirs? -->
-            <div class="card">
-              <div class="work-item-title">
-                What Gods Would Be Theirs? – A Novel
-              </div>
-              <div class="work-meta">
-                Fiction • Available on
-                <a
-                  href="https://www.amazon.com/What-Gods-Would-Be-Theirs-ebook/dp/B004OEIMFS"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Amazon</a
-                >
-              </div>
-              <div class="iframe-wrapper">
-                <iframe
-                  src="https://online.fliphtml5.com/xgwkm/jtgz/"
-                  seamless="seamless"
-                  scrolling="no"
-                  frameborder="0"
-                  allowtransparency="true"
-                  allowfullscreen="true"
-                  title="Preview of What Gods Would Be Theirs?"
-                ></iframe>
-              </div>
-            </div>
-
-            <!-- Literary Analysis & Writing Guide -->
-            <div class="card">
-              <div class="work-item-title">
-                Literary Analysis &amp; Essay Writing Guide
-              </div>
-              <div class="work-meta">
-                Textbook • Available on
-                <a
-                  href="https://www.amazon.com/Literary-Analysis-Essay-Writing-Guide-ebook/dp/B0077DNA1E"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Amazon</a
-                >
-              </div>
-              <div class="iframe-wrapper">
-                <iframe
-                  src="https://online.fliphtml5.com/xgwkm/lwvt/"
-                  seamless="seamless"
-                  scrolling="no"
-                  frameborder="0"
-                  allowtransparency="true"
-                  allowfullscreen="true"
-                  title="Preview of Literary Analysis &amp; Writing Guide"
-                ></iframe>
-              </div>
-            </div>
-
-            <!-- One Thing Right -->
-            <div class="card">
-              <div class="work-item-title">
-                One Thing Right – Children's Book
-              </div>
-              <div class="work-meta">
-                Children's Literature • Available on
-                <a
-                  href="https://www.amazon.com/One-Thing-Right-Colin-Shanafelt/dp/0982989512"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Amazon</a
-                >
-              </div>
-              <div class="iframe-wrapper">
-                <iframe
-                  src="https://online.fliphtml5.com/xgwkm/bdsi/"
-                  seamless="seamless"
-                  scrolling="no"
-                  frameborder="0"
-                  allowtransparency="true"
-                  allowfullscreen="true"
-                  title="Preview of One Thing Right"
-                ></iframe>
-              </div>
-            </div>
-
-            <!-- Educational Apps / Additional Material -->
-            <div class="card">
-              <div class="work-item-title">
-                Educational Applications &amp; Resources
-              </div>
-              <div class="work-meta">
-                Writing, rhetoric, and literature resources
-              </div>
-              <div class="iframe-wrapper">
-                <iframe
-                  src="https://online.fliphtml5.com/xgwkm/ehsc/"
-                  seamless="seamless"
-                  scrolling="no"
-                  frameborder="0"
-                  allowtransparency="true"
-                  allowfullscreen="true"
-                  title="Educational applications and resources"
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <!-- Right column: media & teaching -->
-      <aside>
         <section>
           <h2>Featured Videos</h2>
           <div class="card media-card">
             <div>
-              <strong>On Literary Analysis &amp; Writing</strong>
-              <p>
-                Classroom and craft insights from Colin Shanafelt. Watch more on
-                the <a href="https://www.youtube.com/@LitNotes"
-                target="_blank" rel="noopener noreferrer">LitNotes YouTube
-                channel</a>.
+              <p><span style="color:#e5e7eb;" class="whiteText"><strong>Teaching Excellence Award&nbsp;&nbsp;•&nbsp;&nbsp;</strong></span>Austin Community College</span>
+              
+                <br><a href="https://www.youtube.com/@LitNotes" target="_blank" rel="noopener noreferrer">NISOD Teaching Excellence Award (2023)</a>
               </p>
             </div>
             <div class="yt-iframe">
-              <!-- Provided embed -->
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/1satjTjebPU?si=54oC7quy36kkxVnD"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
+              <iframe src="https://www.youtube.com/embed/1satjTjebPU?si=54oC7quy36kkxVnD" title="NISOD Teaching Excellence Award (2023)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </div>
         </section>
 
         <section>
-          <h2>Military Service</h2>
+          <!-- <h2>Military Service</h2> -->
           <div class="card media-card">
-            <p>
+            <div>
+             <p><span style="color:#e5e7eb;" class="whiteText"><strong>Military Service&nbsp;&nbsp;•&nbsp;&nbsp;</strong></span>United States Air Force</span>
+                <br><a href="https://youtu.be/ONNTIqdrpt0?si=EdEKXRofT9Nw0nNh" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+              </p>
+            </div>
+            <div class="yt-iframe">
+              <iframe src="https://www.youtube.com/embed/ONNTIqdrpt0?si=EdEKXRofT9Nw0nNh" title="My Military Service – Colin Shanafelt" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+<!--             <p>
               Colin Shanafelt is a U.S. Air Force veteran who deployed to South
               America and the Middle East for forward air control ground combat
-              missions. Learn more about his military service in the video
-              below.
-            </p>
-            <div class="yt-iframe">
-              <!-- My Military Service video -->
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/ONNTIqdrpt0?si=EdEKXRofT9Nw0nNh"
-                title="My Military Service – Colin Shanafelt"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <p>
-              Direct link:
-              <a
-                href="https://youtu.be/ONNTIqdrpt0?si=EdEKXRofT9Nw0nNh"
-                target="_blank"
-                rel="noopener noreferrer"
-                >My Military Service on YouTube</a
-              >.
-            </p>
+              missions.
+            </p> -->
           </div>
         </section>
 
@@ -571,21 +420,133 @@
               critical thinking.
             </p>
             <div class="teaching-photo">
-              <!-- Update src to your actual teaching photo path/filename -->
-<img src="assets/images/profile2.jpg" alt="Colin Shanafelt at desk" class="profile-image">
+              <img src="https://squallfight.github.io/biography/assets/images/profile2.png" alt="Colin Shanafelt teaching at a desk with books and a tablet" />
             </div>
           </div>
         </section>
+
+      </div>
+
+      <!-- Right column: Resources & Publications -->
+      <aside>
+        <section>
+          <h2>Content Resources</h2>
+          <div class="works-grid">
+            <!-- Shanafelt Rhetoric Guide -->
+            <div class="card">
+              <div class="work-item-title">
+                Shanafelt Rhetoric Guide
+              </div>
+              <div class="work-meta">
+                Content Resource • Available
+                <a href="https://sites.google.com/utexas.edu/shanafelt-rhetoric-guide/home" target="_blank" rel="noopener noreferrer">online</a>
+              </div>
+              <div class="iframe-wrapper image-frame">
+                <a href="https://sites.google.com/utexas.edu/shanafelt-rhetoric-guide/home" target="_blank" rel="noopener noreferrer">
+                  <img src="https://squallfight.github.io/biography/assets/images/rhetoric_guide.png" alt="Shanafelt Rhetoric Guide" />
+                </a>
+              </div>
+            </div>
+
+            <!-- Shanafelt Writing Guide -->
+            <div class="card">
+              <div class="work-item-title">
+                Shanafelt Writing Guide
+              </div>
+              <div class="work-meta">
+                Content Resource • Available
+                <a href="https://sites.google.com/utexas.edu/shanafelt-writing-guide/home" target="_blank" rel="noopener noreferrer">online</a>
+              </div>
+              <div class="iframe-wrapper image-frame">
+                <a href="https://sites.google.com/utexas.edu/shanafelt-writing-guide/home" target="_blank" rel="noopener noreferrer">
+                  <img src="https://squallfight.github.io/biography/assets/images/writing_guide.png" alt="Shanafelt Writing Guide" /></a>
+              </div>
+            </div>
+
+            <!-- Glossary of Rhetorical Terms -->
+            <div class="card">
+              <div class="work-item-title">
+                Glossary of Rhetorical Terms
+              </div>
+              <div class="work-meta">
+                Reference Resource • Available
+                <a href="https://squallfight.github.io/glossary/" target="_blank" rel="noopener noreferrer">online</a>
+              </div>
+              <div class="iframe-wrapper image-frame">
+                <img src="https://squallfight.github.io/biography/assets/images/glossary.png" alt="Glossary of Rhetorical Terms" />
+              </div>
+            </div>
+        </section>
+        
+        <section>
+          <h2>Published Works</h2>
+          <div class="works-grid">
+           
+            <!-- One Thing Right -->
+            <div class="card">
+              <div class="work-item-title">
+                One Thing Right – Children's Book
+              </div>
+              <div class="work-meta">
+                Children's Literature • Available on
+                <a href="https://www.amazon.com/One-Thing-Right-Colin-Shanafelt/dp/0982989512" target="_blank" rel="noopener noreferrer">Amazon</a>
+              </div>
+              <div class="iframe-wrapper">
+<iframe allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" teidentifier="17hukx1k2rxmimy1qg5" class="fp-iframe" src="https://heyzine.com/flip-book/6478c37193.html"></iframe>
+              </div>
+            </div>
+
+            <!-- What Gods Would Be Theirs? -->
+            <div class="card">
+              <div class="work-item-title">
+                What Gods Would Be Theirs? – A Novel
+              </div>
+              <div class="work-meta">
+                Fiction • Available on
+                <a href="https://www.amazon.com/What-Gods-Would-Be-Theirs-ebook/dp/B004OEIMFS" target="_blank" rel="noopener noreferrer">Amazon</a>
+              </div>
+              <div class="iframe-wrapper">
+                <iframe allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" teidentifier="paxltd4uqemimtt4fo" class="fp-iframe" src="https://heyzine.com/flip-book/5a9de35a10.html" title="Preview of What Gods Would Be Theirs?"></iframe>
+              </div>
+            </div>
+
+            <!-- Valhalla -->
+            <div class="card">
+              <div class="work-item-title">
+                Valhalla – Short Story
+              </div>
+              <div class="work-meta">
+                Short Fiction
+              </div>
+              <div class="iframe-wrapper">
+                <iframe allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" teidentifier="eiqfrwlxxs9mimu47sy" class="fp-iframe" src="https://heyzine.com/flip-book/5adea0dc96.html" title="Valhalla – Short Story"></iframe>
+              </div>
+            </div>
+
+            <!-- Literary Analysis & Writing Guide -->
+            <div class="card">
+              <div class="work-item-title">
+                Literary Analysis &amp; Essay Writing Guide
+              </div>
+              <div class="work-meta">
+                Textbook • Available on
+                <a href="https://www.amazon.com/Literary-Analysis-Essay-Writing-Guide-ebook/dp/B0077DNA1E" target="_blank" rel="noopener noreferrer">Amazon</a>
+              </div>
+              <div class="iframe-wrapper">
+                <iframe allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" teidentifier="t9xwcx3vhr8mimtzm9j" class="fp-iframe" src="https://heyzine.com/flip-book/1f6df48ea4.html" title="Preview of Literary Analysis & Essay Writing Guide"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </aside>
     </main>
 
     <footer>
       <span>&copy; <span id="year"></span> Colin Shanafelt.</span>
-      <span
-        >Site biography &amp; media for professional, classroom, and event
-        use.</span
-      >
+      <span>Site biography &amp; media for professional, classroom, and event use.</span>
     </footer>
+
   </div>
 
   <script>
@@ -593,4 +554,5 @@
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
+
 </html>
