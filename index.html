@@ -6,8 +6,9 @@
   <title>Colin Shanafelt – Biography</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Biography of Colin Shanafelt, author, traveler, veteran, and Professor of Rhetoric at The University of Texas at Austin." />
-      <style>
-           :root {
+
+  <style>
+    :root {
       --bg: #0f172a;
       --bg-alt: #020617;
       --card: #111827;
@@ -27,8 +28,7 @@
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: radial-gradient(circle at top left, #1f2937 0, #020617 50%);
       color: var(--text);
       line-height: 1.5;
@@ -91,13 +91,6 @@
       font-weight: 600;
     }
 
-    .hero-tag span.dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: var(--accent);
-    }
-
     h1 {
       font-size: clamp(2.1rem, 3vw, 2.7rem);
       margin: 5px 0 5px;
@@ -112,71 +105,36 @@
       margin-top: 0;
     }
 
+    /* HERO NAV: semantic list */
     .hero-meta {
+      margin: 0;
+      padding: 0;
+    }
+
+    .hero-meta ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-bottom: 10px;
       font-size: 0.9rem;
       color: var(--muted);
     }
 
-    .hero-meta span {
+    .hero-meta a {
+      display: inline-block;
       padding: 4px 10px;
       border-radius: var(--radius-xl);
       border: 1px solid rgba(156, 163, 175, 0.4);
       background: rgba(15, 23, 42, 0.6);
+      color: var(--muted);
     }
 
-    .hero-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-.topButton a {
-  color: var(--muted);
-}
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 8px 16px;
-      border-radius: var(--radius-xl);
-      border: 1px solid transparent;
-      font-size: 0.9rem;
-      font-weight: 500;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease,
-        box-shadow 0.15s ease, border-color 0.2s ease;
-      white-space: nowrap;
-      gap: 6px;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #111827;
-      box-shadow: 0 14px 30px rgba(249, 115, 22, 0.45);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 18px 40px rgba(249, 115, 22, 0.6);
-      text-decoration: none;
-    }
-
-    .btn-ghost {
-      background: transparent;
-      color: var(--text);
-      border-color: rgba(156, 163, 175, 0.55);
-    }
-
-    .btn-ghost:hover {
+    .hero-meta a:hover {
       border-color: var(--accent);
       color: var(--accent);
-      background: rgba(15, 23, 42, 0.9);
+      background: rgba(15, 23, 42, 0.85);
       text-decoration: none;
     }
 
@@ -204,11 +162,11 @@
       margin: 0 0 14px;
     }
 
+    /* Increased padding for readability */
     .card {
-/*       background-color: red; */
       background: radial-gradient(circle at top left, #111827 0, #020617 60%);
       border-radius: var(--radius-lg);
-      padding: 10px;
+      padding: 14px;
       border: 1px solid var(--border);
       box-shadow: var(--shadow-soft);
     }
@@ -246,7 +204,7 @@
       border: 1px solid rgba(55, 65, 81, 0.8);
       background: #020617;
       padding-top: 5px;
-       padding-bottom: 0px;
+      padding-bottom: 0px;
     }
 
     .iframe-wrapper iframe {
@@ -257,20 +215,21 @@
       padding: 0 !important;
       margin: 0 !important;
     }
-    
-.image-frame {
-  display: flex;
-  align-items: center;   /* vertical centering */
-  justify-content: center; /* horizontal centering */
-  padding: 10px;       /* top & bottom padding */
-}
 
-.image-frame img {
-  display: block;
-  max-width: 100%;
-  max-height: 225px;     /* 300px total height minus 24px top & bottom padding */
-  height: auto;
-}
+    .image-frame {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .image-frame img {
+      display: block;
+      max-width: 100%;
+      max-height: 225px;
+      height: auto;
+      decoding: async;
+    }
 
     .media-card {
       display: flex;
@@ -304,18 +263,13 @@
       top: 0;
     }
 
-    .teaching-photo {
-      margin-top: 12px;
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid rgba(55, 65, 81, 0.8);
-      background: #020617;
+    .label-strong {
+      color: #e5e7eb;
+      font-weight: 700;
     }
 
-    .teaching-photo img {
-      width: 100%;
-      display: block;
-      height: auto;
+    .stack-gap {
+      margin-bottom: 14px;
     }
 
     footer {
@@ -336,219 +290,252 @@
   <div class="page">
     <header>
       <div class="hero-photo">
-        <img src="https://squallfight.github.io/biography/assets/images/profile1.jpg" alt="Colin Shanafelt headshot" />
+        <img src="https://squallfight.github.io/biography/assets/images/profile1.jpg" alt="Colin Shanafelt headshot" decoding="async" />
       </div>
+
       <div class="hero-text">
         <div class="hero-tag">
-          <span class=""></span>
-          <span>Author • Veteran • Professor</span>
+          <span>Professor • Author • Veteran</span>
         </div>
+
         <h1>Colin Shanafelt</h1>
-        <p class="hero-subtitle"><span style="color: lightgray;"><em>Assistant Professor of Instruction</em></span>
-          <br>
+
+        <p class="hero-subtitle">
+          <span style="color: lightgray;"><em>Assistant Professor of Instruction</em></span>
+          <br />
           <span style="color: #bf5700;">The University of Texas at Austin</span>&nbsp;&nbsp;<span style="color: white;">|</span>&nbsp;&nbsp;<span>Department of Rhetoric &amp; Writing</span>
         </p>
-        <div class="hero-meta">
-          <span class="topButton"><a href="https://liberalarts.utexas.edu/rhetoric/faculty/shanafck" target="_blank" rel="noopener noreferrer">Professor</a></span>
-          <span class="topButton"><a href="https://www.amazon.com/stores/Colin-Shanafelt/author/B004PHNLXW" target="_blank" rel="noopener noreferrer">Author</a></span>
-          <span class="topButton"><a href="https://youtu.be/ONNTIqdrpt0" target="_blank" rel="noopener noreferrer">Veteran</a></span>
-          <span class="topButton"><a href="" target="_blank" rel="noopener noreferrer">Traveler</a></span>
-          <span class="topButton"><a href="http://www.youtube.com/@LitNotes" target="_blank" rel="noopener noreferrer">LitNotes</a></span>
-          <span class="topButton"><a href="https://liberalarts.utexas.edu/rhetoric/faculty/shanafck" target="_blank" rel="noopener noreferrer">U.S. Air Force</a></span>
-          <span class="topButton"><a href="http://www.drw.utexas.edu" target="_blank" rel="noopener noreferrer">UT Austin</a></span>
-        </div>
-        <!--         <div class="hero-links">
-          <a class="btn btn-primary" href="https://www.youtube.com/@LitNotes" target="_blank" rel="noopener noreferrer">
-            LitNotes
-          </a>
-          <a class="btn btn-ghost" href="https://www.amazon.com/stores/Colin-Shanafelt/author/B004PHNLXW" target="_blank" rel="noopener noreferrer">
-            Amazon
-          </a>
-        </div> -->
+
+        <nav class="hero-meta" aria-label="Primary links">
+          <ul>
+            <li><a href="https://liberalarts.utexas.edu/rhetoric/faculty/shanafck" target="_blank" rel="noopener noreferrer">Faculty Profile</a></li>
+            <li><a href="https://www.amazon.com/stores/Colin-Shanafelt/author/B004PHNLXW" target="_blank" rel="noopener noreferrer">Publications</a></li>
+            <li><a href="https://youtu.be/ONNTIqdrpt0" target="_blank" rel="noopener noreferrer">Air Force</a></li>
+            <li><a href="https://www.drw.utexas.edu" target="_blank" rel="noopener noreferrer">UT Rhetoric & Writing</a></li>
+            <li><a href="mailto:colin.shanafelt@utexas.edu" rel="noopener noreferrer">Contact</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
     <main>
-      <!-- Left column: biography & works -->
+      <!-- Left column -->
       <div>
         <section>
           <h2>Biography</h2>
           <div class="card bio-text">
-           <p>Colin Shanafelt is an author, educator, veteran, and digital-learning innovator whose work integrates literature, rhetoric, and emerging technologies. He serves as an Assistant Professor of Instruction in the Department of Rhetoric &amp; Writing at The University of Texas at Austin, where he teaches courses in rhetoric, critical reading, and persuasive writing. His professional focus includes helping guide the responsible evolution of artificial intelligence in writing and education, with an emphasis on ethical innovation and intellectual growth while enhancing human achievement and productivity.</p>
-           <p>As a novelist, children&rsquo;s author, and textbook writer, Shanafelt&rsquo;s publications include <i>What Gods Would Be Theirs?</i>, <i>One Thing Right</i>, and <i>Literary Analysis &amp; Writing Guide</i>. His forthcoming novel, <i>Apotheosis</i>, chronicles the emergence of general artificial intelligence via quantum computing. As a developer of multimodal learning resources, he has created online instructional guides for rhetoric and writing, an interactive glossary of rhetorical terms, the <i>LitNotes</i> video lecture series, and a suite of mobile applications for students of composition and literature. In 2012, the success of his mobile application business enabled Shanafelt to travel around the world with his wife and daughter, visiting twenty-five countries in fifteen months&mdash;a journey that continues to shape his global perspective on teaching, writing, and culture.</p>
-           <p>Shanafelt is a veteran of the United States Air Force, where he supported forward air-control operations during deployments to South America and the Middle East. His service included technical communications, field logistics, and mobile ground-based support for joint teams operating in dynamic, hostile environments.</p>
-       </div>
+            <p>
+              Colin Shanafelt is an author, educator, veteran, and digital-learning innovator whose work integrates
+              literature, rhetoric, and emerging technologies. He serves as an Assistant Professor of Instruction in the
+              Department of Rhetoric &amp; Writing at The University of Texas at Austin, where he teaches courses in
+              rhetoric, critical reading, and persuasive writing. His professional focus includes helping guide the
+              responsible evolution of artificial intelligence in writing and education, with an emphasis on ethical
+              innovation and intellectual growth while enhancing human achievement and productivity.
+            </p>
+
+            <p id="travel">
+              As a novelist, children&rsquo;s author, and textbook writer, Shanafelt&rsquo;s publications include
+              <i>What Gods Would Be Theirs?</i>, <i>One Thing Right</i>, and <i>Literary Analysis &amp; Writing Guide</i>.
+              His forthcoming novel, <i>Apotheosis</i>, chronicles the emergence of general artificial intelligence via
+              quantum computing. As a developer of multimodal learning resources, he has created online instructional
+              guides for rhetoric and writing, an interactive glossary of rhetorical terms, the <i>LitNotes</i> video
+              lecture series, and a suite of mobile applications for students of composition and literature. In 2012,
+              the success of his mobile application work enabled him to travel around the world with his wife
+              and daughter, visiting twenty-five countries in fifteen months, an experience that continues to inform his teaching, writing, and global perspective.
+            </p>
+
+            <p id="experience">
+              Shanafelt is a veteran of the United States Air Force, where he supported forward air-control operations
+              during deployments to South America and the Middle East. His service included technical communications,
+              field logistics, and mobile ground-based support for joint teams operating in dynamic, hostile
+              environments.
+            </p>
+          </div>
         </section>
 
         <section>
-          <h2>Featured Videos</h2>
-          <div class="card media-card">
+          <h2>Selected Media</h2>
+
+          <div class="card media-card stack-gap">
             <div>
-              <p><span style="color:#e5e7eb;" class="whiteText"><strong>Teaching Excellence Award&nbsp;&nbsp;•&nbsp;&nbsp;</strong></span>Austin Community College</span>
-                <br><a href="https://youtu.be/1satjTjebPU?si=oYyKky36r9ghPeEC" target="_blank" rel="noopener noreferrer">NISOD Teaching Excellence Award (2023)</a>
+              <p>
+                <span class="label-strong">Teaching Excellence Award&nbsp;&nbsp;•&nbsp;&nbsp;</span>Austin Community
+                College
+                <br />
+                <a href="https://youtu.be/1satjTjebPU?si=oYyKky36r9ghPeEC" target="_blank" rel="noopener noreferrer">NISOD
+                  Teaching Excellence Award (2023)</a>
               </p>
             </div>
             <div class="yt-iframe">
-              <iframe src="https://www.youtube.com/embed/1satjTjebPU?si=54oC7quy36kkxVnD" title="NISOD Teaching Excellence Award (2023)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe loading="lazy" src="https://www.youtube.com/embed/1satjTjebPU?si=54oC7quy36kkxVnD" title="NISOD Teaching Excellence Award (2023)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="card media-card stack-gap">
+            <div>
+              <p>
+                <span class="label-strong">Military Service&nbsp;&nbsp;•&nbsp;&nbsp;</span>United States Air Force
+                <br />
+                <a href="https://youtu.be/ONNTIqdrpt0?si=EdEKXRofT9Nw0nNh" target="_blank" rel="noopener noreferrer">Forward Air Control (Radio Technician)</a>
+              </p>
+            </div>
+            <div class="yt-iframe">
+              <iframe loading="lazy" src="https://www.youtube.com/embed/ONNTIqdrpt0?si=fP5drWsvQt2qsnaf" title="Forward Air Control (Radio Technician)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="card media-card">
+            <div>
+              <p>
+                <span class="label-strong">Video Production &amp; Editing&nbsp;&nbsp;•&nbsp;&nbsp;</span>DWRL Peep Show
+                (2025)
+                <br />
+                <a href="https://youtu.be/nLd0P2MLGsA" target="_blank" rel="noopener noreferrer">Peepocalypse Rising:
+                  Flight of the Crimson Orbs</a>
+              </p>
+            </div>
+            <div class="yt-iframe">
+              <iframe loading="lazy" src="https://www.youtube.com/embed/nLd0P2MLGsA?si=YDOcN_cOaSDlNzDK" title="Peepocalypse Rising: Flight of the Crimson Orbs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </div>
         </section>
 
         <section>
-          <!-- <h2>Military Service</h2> -->
-          <div class="card media-card">
-            <div>
-              <p><span style="color:#e5e7eb;" class="whiteText"><strong>Military Service&nbsp;&nbsp;•&nbsp;&nbsp;</strong></span>United States Air Force</span>
-                <br><a href="https://youtu.be/ONNTIqdrpt0?si=EdEKXRofT9Nw0nNh" target="_blank" rel="noopener noreferrer">Forward Air Control (Radio Technician)</a>
-              </p>
-            </div>
-            <div class="yt-iframe">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/ONNTIqdrpt0?si=fP5drWsvQt2qsnaf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-          </div>
-        </section>
+          <h2>Personal Projects</h2>
 
-        <section>
-          <div class="card media-card">
+          <div class="card media-card stack-gap">
             <div>
-              <p><span style="color:#e5e7eb;" class="whiteText"><strong>Video Production & Editing&nbsp;&nbsp;•&nbsp;&nbsp;</strong></span>DWRL Peep Show (2025)</span>
-                <br><a href="https://youtu.be/nLd0P2MLGsA" target="_blank" rel="noopener noreferrer">Peepocalypse Rising: Flight of the Crimson Orbs</a>
-              </p>
-            </div>
-            <div class="yt-iframe">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/nLd0P2MLGsA?si=YDOcN_cOaSDlNzDK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-          </div>
-        </section>
-        <section>
-          <h2>Video Lectures</h2>
-          <div class="card media-card">
-            <div>
-              <p><span style="color:#e5e7eb;" class="whiteText"><strong>YouTube Channel&nbsp;&nbsp;•&nbsp;&nbsp;</strong></span>Writing &amp; Analysis Instruction <em>(75+ videos)</em></span>
-                <br><a href="http://www.youtube.com/@LitNotes" target="_blank" rel="noopener noreferrer">LitNotes</a>
+              <p>
+                <span class="label-strong">Tiny House&nbsp;&nbsp;•&nbsp;&nbsp;</span>Designed &amp; Built
+                <br />
+                <a href="https://www.airbnb.com/h/tinyhouseoftherisingsun" target="_blank" rel="noopener noreferrer">Tiny
+                  House of the Rising Sun</a>
               </p>
             </div>
             <div class="iframe-wrapper image-frame">
-              <a href="www.youtube.com/@LitNotes" target="_blank" rel="noopener noreferrer">
-                <img src="https://squallfight.github.io/biography/assets/images/litnotes_2.png" alt="Shanafelt Writing Guide" /></a>
+              <a href="https://www.airbnb.com/h/tinyhouseoftherisingsun" target="_blank" rel="noopener noreferrer">
+                <img loading="lazy" src="https://squallfight.github.io/biography/assets/images/tinyhouse.jpg" alt="Tiny House" />
+              </a>
+            </div>
+          </div>
+
+          <div class="card media-card">
+            <div>
+              <p>
+                <span class="label-strong">Custom Motorcycle&nbsp;&nbsp;•&nbsp;&nbsp;</span>Designed &amp; Built
+                <br />
+                <a href="https://www.youtube.com/@LitNotes" target="_blank" rel="noopener noreferrer">Squallfight</a>
+              </p>
+            </div>
+            <div class="iframe-wrapper image-frame">
+              <img loading="lazy" src="https://squallfight.github.io/biography/assets/images/squallfight.jpg" alt="Squallfight Motorcycle" />
             </div>
           </div>
         </section>
-
       </div>
 
-      <!-- Right column: Resources & Publications -->
+      <!-- Right column -->
       <aside>
         <section>
-          <h2>Content Resources</h2>
+          <h2>Digital Resources</h2>
           <div class="works-grid">
-            <!-- Shanafelt Rhetoric Guide -->
             <div class="card">
-              <div class="work-item-title">
-                Shanafelt Rhetoric Guide
-              </div>
+              <div class="work-item-title">Shanafelt Rhetoric Guide</div>
               <div class="work-meta">
                 Content Resource • Available
                 <a href="https://sites.google.com/utexas.edu/shanafelt-rhetoric-guide/home" target="_blank" rel="noopener noreferrer">online</a>
               </div>
               <div class="iframe-wrapper image-frame">
                 <a href="https://sites.google.com/utexas.edu/shanafelt-rhetoric-guide/home" target="_blank" rel="noopener noreferrer">
-                  <img src="https://squallfight.github.io/biography/assets/images/rhetoric_guide.png" alt="Shanafelt Rhetoric Guide" />
+                  <img loading="lazy" src="https://squallfight.github.io/biography/assets/images/rhetoric_guide.png" alt="Shanafelt Rhetoric Guide" />
                 </a>
               </div>
             </div>
 
-            <!-- Shanafelt Writing Guide -->
             <div class="card">
-              <div class="work-item-title">
-                Shanafelt Writing Guide
-              </div>
+              <div class="work-item-title">Shanafelt Writing Guide</div>
               <div class="work-meta">
                 Content Resource • Available
                 <a href="https://sites.google.com/utexas.edu/shanafelt-writing-guide/home" target="_blank" rel="noopener noreferrer">online</a>
               </div>
               <div class="iframe-wrapper image-frame">
                 <a href="https://sites.google.com/utexas.edu/shanafelt-writing-guide/home" target="_blank" rel="noopener noreferrer">
-                  <img src="https://squallfight.github.io/biography/assets/images/writing_guide.png" alt="Shanafelt Writing Guide" /></a>
+                  <img loading="lazy" src="https://squallfight.github.io/biography/assets/images/writing_guide.png" alt="Shanafelt Writing Guide" />
+                </a>
               </div>
             </div>
 
-            <!-- Glossary of Rhetorical Terms -->
             <div class="card">
-              <div class="work-item-title">
-                Glossary of Rhetorical Terms
-              </div>
+              <div class="work-item-title">Glossary of Rhetorical Terms</div>
               <div class="work-meta">
                 Reference Resource • Available
                 <a href="https://squallfight.github.io/glossary/" target="_blank" rel="noopener noreferrer">online</a>
               </div>
               <div class="iframe-wrapper image-frame">
-                <img src="https://squallfight.github.io/biography/assets/images/glossary.png" alt="Glossary of Rhetorical Terms" />
-              </div>
-            </div>
-        </section>
-
-        <section>
-          <h2>Published Works</h2>
-          <div class="works-grid">
-
-            <!-- One Thing Right -->
-            <div class="card">
-              <div class="work-item-title">
-                One Thing Right
-              </div>
-              <div class="work-meta">
-                Children's Literature • Available on
-                <a href="https://www.amazon.com/One-Thing-Right-Colin-Shanafelt/dp/0982989512" target="_blank" rel="noopener noreferrer">Amazon</a>
-              </div>
-              <div class="iframe-wrapper">
-                <iframe allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" teidentifier="17hukx1k2rxmimy1qg5" class="fp-iframe" src="https://heyzine.com/flip-book/6478c37193.html"></iframe>
+                <a href="https://squallfight.github.io/glossary/" target="_blank" rel="noopener noreferrer">
+                  <img loading="lazy" src="https://squallfight.github.io/biography/assets/images/glossary.png" alt="Glossary of Rhetorical Terms" />
+                </a>
               </div>
             </div>
 
-            <!-- What Gods Would Be Theirs? -->
+            <!-- LitNotes card: right column only -->
             <div class="card">
-              <div class="work-item-title">
-                What Gods Would Be Theirs?
-              </div>
+              <div class="work-item-title">Video Lectures</div>
               <div class="work-meta">
-                Novel • Available on
-                <a href="https://www.amazon.com/What-Gods-Would-Be-Theirs-ebook/dp/B004OEIMFS" target="_blank" rel="noopener noreferrer">Amazon</a>
+                LitNotes •
+                <a href="https://www.youtube.com/@LitNotes" target="_blank" rel="noopener noreferrer">YouTube</a>
               </div>
-              <div class="iframe-wrapper">
-                <iframe allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" teidentifier="paxltd4uqemimtt4fo" class="fp-iframe" src="https://heyzine.com/flip-book/5a9de35a10.html" title="Preview of What Gods Would Be Theirs?"></iframe>
-              </div>
-            </div>
-
-            <!-- Valhalla -->
-            <div class="card">
-              <div class="work-item-title">
-                Valhalla
-              </div>
-              <div class="work-meta">
-                Short Fiction
-              </div>
-              <div class="iframe-wrapper">
-                <iframe allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" teidentifier="eiqfrwlxxs9mimu47sy" class="fp-iframe" src="https://heyzine.com/flip-book/5adea0dc96.html" title="Valhalla – Short Story"></iframe>
-              </div>
-            </div>
-
-            <!-- Literary Analysis & Writing Guide -->
-            <div class="card">
-              <div class="work-item-title">
-                Literary Analysis &amp; Essay Writing Guide
-              </div>
-              <div class="work-meta">
-                Textbook • Out of Print
-                <!-- <a href="https://www.amazon.com/Literary-Analysis-Essay-Writing-Guide-ebook/dp/B0077DNA1E" target="_blank" rel="noopener noreferrer">Amazon</a> -->
-              </div>
-              <div class="iframe-wrapper">
-                <iframe allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" teidentifier="t9xwcx3vhr8mimtzm9j" class="fp-iframe" src="https://heyzine.com/flip-book/1f6df48ea4.html" title="Preview of Literary Analysis & Essay Writing Guide"></iframe>
+              <div class="iframe-wrapper image-frame">
+                <a href="https://www.youtube.com/@LitNotes" target="_blank" rel="noopener noreferrer">
+                  <img loading="lazy" src="https://squallfight.github.io/biography/assets/images/litnotes_2.png" alt="LitNotes channel preview" />
+                </a>
               </div>
             </div>
           </div>
         </section>
 
+        <section>
+          <h2>Published Works</h2>
+          <div class="works-grid">
+            <div class="card">
+              <div class="work-item-title">One Thing Right</div>
+              <div class="work-meta">
+                Children's Literature • Available on
+                <a href="https://www.amazon.com/One-Thing-Right-Colin-Shanafelt/dp/0982989512" target="_blank" rel="noopener noreferrer">Amazon</a>
+              </div>
+              <div class="iframe-wrapper">
+                <iframe loading="lazy" allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" teidentifier="17hukx1k2rxmimy1qg5" class="fp-iframe" src="https://heyzine.com/flip-book/6478c37193.html"></iframe>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="work-item-title">What Gods Would Be Theirs?</div>
+              <div class="work-meta">
+                Novel • Available on
+                <a href="https://www.amazon.com/What-Gods-Would-Be-Theirs-ebook/dp/B004OEIMFS" target="_blank" rel="noopener noreferrer">Amazon</a>
+              </div>
+              <div class="iframe-wrapper">
+                <iframe loading="lazy" allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" teidentifier="paxltd4uqemimtt4fo" class="fp-iframe" src="https://heyzine.com/flip-book/5a9de35a10.html" title="Preview of What Gods Would Be Theirs?"></iframe>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="work-item-title">Valhalla</div>
+              <div class="work-meta">Short Fiction</div>
+              <div class="iframe-wrapper">
+                <iframe loading="lazy" allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" teidentifier="eiqfrwlxxs9mimu47sy" class="fp-iframe" src="https://heyzine.com/flip-book/5adea0dc96.html" title="Valhalla – Short Story"></iframe>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="work-item-title">Literary Analysis &amp; Essay Writing Guide</div>
+              <div class="work-meta">Textbook • Out of Print</div>
+              <div class="iframe-wrapper">
+                <iframe loading="lazy" allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" teidentifier="t9xwcx3vhr8mimtzm9j" class="fp-iframe" src="https://heyzine.com/flip-book/1f6df48ea4.html" title="Preview of Literary Analysis & Essay Writing Guide"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
       </aside>
     </main>
 
@@ -556,11 +543,9 @@
       <span>&copy; <span id="year"></span> Colin Shanafelt.</span>
       <span>Contact: <a href="mailto:colin.shanafelt@utexas.edu" target="_blank" rel="noopener noreferrer">colin.shanafelt@utexas.edu</a></span>
     </footer>
-
   </div>
 
   <script>
-    // Simple current-year helper
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
