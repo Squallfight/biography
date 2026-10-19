@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+  <!-- Google Analytics 4 tracking for the biography website -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7VSGS3GYKT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7VSGS3GYKT');
+  </script>
+
   <meta charset="UTF-8" />
   <title>Colin Shanafelt – Biography</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -313,6 +323,26 @@
       color: rgba(231, 233, 238, 0.70);
     }
 
+    /* Full-width instructional graphic with a clickable, readable original */
+    .feature-image {
+      display: block;
+      padding: 0;
+      overflow: hidden;
+      border-radius: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      background: rgba(2, 6, 23, 0.85);
+    }
+
+    .feature-image:hover {
+      border-color: rgba(191, 87, 0, 0.5);
+    }
+
+    .feature-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
     .media-card .yt-iframe {
       position: relative;
       width: 100%;
@@ -455,6 +485,19 @@
           <div class="card media-card stack-gap">
             <div>
               <p>
+                <span class="label-strong">Principles of Conflict &amp; Resolution</span>
+                <br />
+                <a href="https://infograph.venngage.com/pl/KjVLuasGOXU" target="_blank" rel="noopener noreferrer">A Field Guide to Controversy Analysis</a>
+              </p>
+            </div>
+            <a class="feature-image" href="assets/images/This.png" target="_blank" rel="noopener noreferrer" aria-label="View the full-size Principles of Conflict and Resolution infographic">
+              <img loading="lazy" src="https://squallfight.github.io/biography/assets/images/This.png" alt="Principles of Conflict and Resolution infographic illustrating the trajectory of conflict and ten principles for conflict resolution" />
+            </a>
+          </div>
+
+          <div class="card media-card stack-gap">
+            <div>
+              <p>
                 <span class="label-strong">Teaching Excellence Award&nbsp;&nbsp;•&nbsp;&nbsp;</span>Austin Community
                 College
                 <br />
@@ -526,6 +569,7 @@
               <img loading="lazy" src="https://squallfight.github.io/biography/assets/images/squallfight.jpg" alt="Squallfight Motorcycle" />
             </div>
           </div>
+          
         </section>
       </div>
 
